@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+
+
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+html, body { height: 100%; }
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/**********************
+***********************
+***** L A Y O U T *****
+***********************
+***********************/
+app-root {
+  display: block;
+  background-color: #EDEDED;
+  min-height: 100vh;
+}
+
+
+/* lg screen */
+@media screen and (min-width : 480px) {
+  app-root {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+  }
+}

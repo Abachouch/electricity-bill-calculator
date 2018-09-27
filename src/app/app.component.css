@@ -1,0 +1,84 @@
+/** navbar **/
+
+.navbar {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 55px 10px 5px 10px;
+  display: flex;
+  top: -250px ;
+  justify-content: space-between;
+  transition: top 200ms ease ;
+}
+
+.navbar-icons{
+margin-top: 100px ;
+}
+
+.navbar-icons a{
+  display: block ;color: #46CFC1 ;
+}
+
+
+
+
+
+.navbar-show{
+  top: 0 ;
+}
+
+.navbar-menu {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 998;
+}
+
+.navbar-brand {
+ margin: 0 ;
+  position: fixed;
+  top: 14px;
+  z-index: 999;
+  left: 80px;
+}
+.navbar-brand a{
+   color: #333333;
+  font-size: .8rem;
+  text-decoration : none;
+  font-weight: 400;
+}
+
+main{
+  padding: 100px 20px 20px 20px ;
+  display: block ;
+  width: 100% ;
+}
+
+@media screen and (max-width : 480px){
+  .navbar-icons{
+    margin-top: 0;
+    }
+  .navbar-icons a{
+    display: inline-block ;
+    margin-right: 10px ;
+  }
+}
+
+
+
+/** tablet ad pc **/
+@media screen and (min-width : 480px) {
+  .navbar {
+    position: relative;
+    padding: 10px;
+    min-height: 450px;
+    flex-direction: column;
+    top: 0;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+}

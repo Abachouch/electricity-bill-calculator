@@ -1,20 +1,27 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- Aside bar -->
+<nav class="navbar" [class.navbar-show]="navbarShow">
+	<button class="navbar-menu" (click)="toggleNavbar()" mat-icon-button>
+	<mat-icon aria-label="Toggle menu">menu</mat-icon>
+	</button>
+	<h1 class="navbar-brand"><a href="/home">{{title}}</a></h1>
+	<div class="navbar-icons">
+		<a mat-icon-button matTooltip="add new record" matTooltipPosition="right">
+			<mat-icon aria-label="Calculate new Record">add</mat-icon>
+		</a>
+		<a mat-icon-button matTooltip="Tips About how to Consome less Power" matTooltipPosition="right">
+			<mat-icon aria-label="Calculate new Record">import_contacts</mat-icon>
+		</a>
+		<a mat-icon-button matTooltip="Dahboard" href="/dashboard" matTooltipPosition="right">
+			<mat-icon aria-label="Calculate new Record">equalizer</mat-icon>
+		</a>
+	</div>
+	<button class="navbar-help" (click)="toggleNavbar()" mat-icon-button matTooltip="How To Use This App"
+	matTooltipPosition="right">
+	<mat-icon aria-label="Toggle menu">help</mat-icon>
+	</button>
+</nav>
+<!-- router outlet here -->
 
+<main>
+	<router-outlet></router-outlet>
+</main>
