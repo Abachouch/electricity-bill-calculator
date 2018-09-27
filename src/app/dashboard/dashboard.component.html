@@ -1,0 +1,19 @@
+<div class="dashboard">
+  <div class="chart-wraper">
+    <div class="chart">
+      <div class="chart-tower" *ngFor="let c of data">
+        <div class="tower" [style.height.px] ="c.cost"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="historyList">
+    <table>
+      <tr *ngFor='let row of data'>
+        <td>{{formateDate( row.date )}}</td>
+        <td>{{row.whatt}}</td>
+        <td>{{ row.cost }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
