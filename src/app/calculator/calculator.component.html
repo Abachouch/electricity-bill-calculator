@@ -1,0 +1,69 @@
+<div class="calcul-container">
+
+
+
+  <div class="calc-card">
+
+    <div class="cacl-card-header">
+      <h1 class="calc-card-title">{{cardTitle}}</h1>
+    </div>
+
+    <div class="calc-card-body" [hidden]="! isFirst">
+
+
+      <mat-form-field style="width: 100% ;">
+        <mat-label>Aveable Citys</mat-label>
+        <mat-select placeholder="Select Your City" [formControl]="cityControl" required [(value)]="city"
+        >
+          <mat-option *ngFor="let city of citys" [value]="city">{{city.name}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="cityControl.hasError('required')">Please Choose a City</mat-error>
+        <mat-hint>{{cityControl.value?.ste}}</mat-hint>
+      </mat-form-field>
+
+      <div class="card-buttons-wraper">
+        <button class="calc-card-button--next" mat-raised-button (click)="selectCity()">Next</button>
+      </div>
+
+      <h3 class="calc-help-header">Why choose a city ?</h3>
+      <p class="calc-help-text">
+        Every City Has her own Strategy to
+        Calculate the cost of each KW
+      </p>
+    </div>
+
+
+    <div class="calc-card-body" [hidden]="isFirst">
+
+
+      <mat-form-field class="example-full-width" style="width : 100% ;">
+        <mat-label>Whatt Consomation</mat-label>
+        <input matInput placeholder="Whatt Consomation" [(ngModel)]="whatt" (ngModelChange)="calc()" type="number">
+        <span matSuffix>Whatt</span>
+      </mat-form-field>
+
+      <h3 class="calc-card-result-label" for="resul">SUM Result in DH</h3>
+      <h1 class="calc-card-result">{{sum}}</h1>
+      <ul class="calc-card-result-info-wraper  ">
+        <li class="calc-card-result-info">
+          <h6 class="calc-card-result-info-label">Tax 14%</h6>
+          <h4 class="calc-card-result-info-value">{{tva}}</h4>
+        </li>
+        <li class="calc-card-result-info">
+          <h6 class="calc-card-result-info-label">Sum Ht</h6>
+          <h4 class="calc-card-result-info-value">{{ht}}</h4>
+        </li>
+        <li class="calc-card-result-info">
+          <h6 class="calc-card-result-info-label">Fixed Red</h6>
+          <h4 class="calc-card-result-info-value">14.7</h4>
+        </li>
+      </ul>
+
+
+      <div class="card-buttons-wraper">
+        <button class="calc-card-button--next" mat-raised-button (click)="fakeData()">fakeData</button>
+      </div>
+
+    </div>
+  </div>
+</div>
