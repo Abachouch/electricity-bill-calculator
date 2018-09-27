@@ -1,0 +1,113 @@
+/* app-home{
+display: flex ;
+} */
+
+.home-container {
+  display: block;
+}
+
+
+
+.home-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 3.4rem;
+  font-size: calc(24px + (52 - 24) * ((100vw - 300px) / (1600 - 300)));
+  color: #333333;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.home-description {
+  font-family: Montserrat;
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 20px;
+  font-size: 14px;
+  text-transform: lowercase;
+  color: #333333;
+  margin: 0;
+}
+
+.home-button {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 70px 0;
+  display: inline-block;
+  background: #46BBAF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 12px 32px;
+}
+
+.home-button:hover {
+  background-color: #46CFC1;
+}
+
+.home-map--title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 19px;
+  font-size: 13px;
+  text-transform: uppercase;
+  /* gray-500 */
+  color: #C4C4C4;
+}
+
+.home-map {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-map li {}
+
+.home-map li a {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
+  font-size: 15px;
+  text-transform: capitalize;
+  padding-top: 2px;
+  /* text-color */
+  color: #333333;
+  text-decoration: none;
+}
+
+.home-map li ::after {
+  content: '→';
+  display: inline-block;
+  opacity: 0;
+  margin-left: -10px;
+  transition: margin-left ease 200ms;
+}
+
+.home-map li:hover ::after {
+
+  opacity: 1;
+  margin-left: 10px;
+}
+
+/** lg only **/
+@media screen and (min-width: 900px) {
+  .home-container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto ;
+  }
+  .home-column {
+    padding: 20px;
+  
+  }
+}
